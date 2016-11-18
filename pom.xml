@@ -18,6 +18,7 @@
     <name>Spring Batch Dashboard - Parent</name>
 
     <modules>
+        <module>dashboard-persistence</module>
         <module>dashboard-app</module>
     </modules>
 
