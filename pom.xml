@@ -19,6 +19,7 @@
 
     <modules>
         <module>dashboard-persistence</module>
+        <module>dashboard-rest</module>
         <module>dashboard-app</module>
     </modules>
 
