@@ -10,7 +10,6 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 import static org.springframework.hateoas.mvc.ControllerLinkBuilder.linkTo;
-import static org.springframework.hateoas.mvc.ControllerLinkBuilder.methodOn;
 
 /**
  * @author Tiberiu
@@ -33,6 +32,6 @@ public class JobResourceAssembler extends ResourceAssemblerSupport<Job, JobResou
 
     public Resources<JobResource> toEmbeddedList(Iterable<Job> entities) {
         final List<JobResource> resources = toResources(entities);
-        return new Resources<>(resources, linkTo(methodOn(JobsController.class).getAllJobs()).withSelfRel());
+        return new Resources<>(resources, linkTo(JobsController.class).withSelfRel());
     }
 }
