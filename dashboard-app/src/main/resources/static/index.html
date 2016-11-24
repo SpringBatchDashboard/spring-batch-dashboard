@@ -21,64 +21,65 @@
   <link rel="stylesheet" href="css/dashboard.css">
 
   <!-- scripts -->
-  <script type="text/javascript" src="js/scripts/tether.min.js"></script>
-  <script type="text/javascript" src="js/scripts/jquery/jquery-3.0.0.min.js"></script>
-  <script type="text/javascript" src="js/scripts/bootstrap/bootstrap.min.js"></script>
-  <script type="text/javascript" src="js/scripts/underscore-min.js"></script>
-  <script type="text/javascript" src="js/scripts/backbone-min.js"></script>
-  <script type="text/javascript" src="js/scripts/backbone.paginator.js"></script>
-  <script type="text/javascript" src="js/scripts/backgrid.js"></script>
-  <script type="text/javascript" src="js/scripts/backgrid-paginator.js"></script>
-  <script type="text/javascript" src="js/scripts/backgrid-filter.js"></script>
+  <script type="text/javascript" src="js/lib/tether/tether.min.js"></script>
+  <script type="text/javascript" src="js/lib/jquery/jquery-3.0.0.min.js"></script>
+  <script type="text/javascript" src="js/lib/bootstrap/bootstrap.min.js"></script>
+  <script type="text/javascript" src="js/lib/underscore/underscore-min.js"></script>
+  <script type="text/javascript" src="js/lib/backbone/backbone-min.js"></script>
+  <script type="text/javascript" src="js/lib/backbone/backbone.paginator.js"></script>
+  <script type="text/javascript" src="js/lib/backgrid/backgrid.js"></script>
+  <script type="text/javascript" src="js/lib/backgrid/backgrid-paginator.js"></script>
+  <script type="text/javascript" src="js/lib/backgrid/backgrid-filter.js"></script>
 
-  <script type="text/javascript" src="js/Dashboard.js"></script>
+  <script type="text/javascript" src="js/dashboard.js"></script>
 
   <!-- models -->
-  <script type="text/javascript" src="js/models/JobInstanceModel.js"></script>
-  <script type="text/javascript" src="js/models/JobModel.js"></script>
+  <script type="text/javascript" src="js/app/models/JobInstanceModel.js"></script>
+  <script type="text/javascript" src="js/app/models/JobModel.js"></script>
 
   <!-- views -->
-  <script type="text/javascript" src="js/views/HomeView.js"></script>
-  <script type="text/javascript" src="js/views/JobView.js"></script>
-  <script type="text/javascript" src="js/views/JobInstanceView.js"></script>
+  <script type="text/javascript" src="js/app/views/HomeView.js"></script>
+  <script type="text/javascript" src="js/app/views/JobView.js"></script>
+  <script type="text/javascript" src="js/app/views/JobInstanceView.js"></script>
 
   <!-- collections -->
-  <script type="text/javascript" src="js/collections/JobCollection.js"></script>
-  <script type="text/javascript" src="js/collections/JobInstanceCollection.js"></script>
+  <script type="text/javascript" src="js/app/collections/JobCollection.js"></script>
+  <script type="text/javascript" src="js/app/collections/JobInstanceCollection.js"></script>
 
   <!-- router -->
-  <script type="text/javascript" src="js/Router.js"></script>
+  <script type="text/javascript" src="js/router.js"></script>
 
 </head>
 
 <body>
-  <!-- navbar -->
-  <nav class="navbar navbar-dark navbar-fixed-top bg-inverse">
-    <button type="button" class="navbar-toggler hidden-sm-up" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar" aria-label="Toggle navigation"></button>
-    <a class="navbar-brand" href="#">Batch Dashboard</a>
-    <div id="navbar">
-      <nav class="nav navbar-nav float-xs-left">
-        <a class="nav-item nav-link" href="#dashboard">Dashboard</a>
-        <a class="nav-item nav-link" href="#jobs">Jobs</a>
-        <a class="nav-item nav-link" href="#instances">Job Instances</a>
-      </nav>
-      <nav class="nav navbar-nav float-xs-right">
-        <a class="nav-item nav-link" href="#">Logout</a>
-      </nav>
-    </div>
-  </nav>
-
   <div class="container">
-    <div id="search" class="mt-1"></div>
-    <div id="grid" class="table-responsive"></div>
-    <div id="paginator" class="mt-1"></div>
+
+    <nav class="navbar navbar-dark bg-inverse">
+      <button type="button" class="navbar-toggler hidden-sm-up" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar" aria-label="Toggle navigation"></button>
+
+      <a class="navbar-brand" href="#">
+        <img src="images/dashboard.png" class="d-inline-block align-top" width="30" height="30" alt="">Batch Dashboard
+      </a>
+
+      <div id="navbar">
+        <nav class="nav navbar-nav float-xs-left">
+          <a class="nav-item nav-link" href="#jobs">jobs</a>
+          <a class="nav-item nav-link" href="#instances">job instances</a>
+        </nav>
+        <nav class="nav navbar-nav float-xs-right">
+          <a class="nav-item nav-link" href="#">logout</a>
+        </nav>
+      </div>
+    </nav>
+
+    <div class="container-fluid">
+      <div id="search" class="float-lg-right"></div>
+      <div id="grid"></div>
+      <div id="paginator"></div>
+    </div>
+
   </div>
 
-  <footer class="footer">
-    <div class="container">
-      <span class="text-muted">Place sticky footer content here.</span>
-    </div>
-  </footer>
 </body>
 
 </html>
