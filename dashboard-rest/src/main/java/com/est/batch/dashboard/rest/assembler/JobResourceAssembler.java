@@ -3,6 +3,7 @@ package com.est.batch.dashboard.rest.assembler;
 import com.est.batch.dashboard.rest.controller.JobsController;
 import com.est.batch.dashboard.rest.model.Job;
 import com.est.batch.dashboard.rest.resource.JobResource;
+import org.springframework.hateoas.Link;
 import org.springframework.hateoas.Resources;
 import org.springframework.hateoas.mvc.ResourceAssemblerSupport;
 import org.springframework.stereotype.Service;
@@ -27,6 +28,12 @@ public class JobResourceAssembler extends ResourceAssemblerSupport<Job, JobResou
         final JobResource resource = instantiateResource(job);
         resource.setExecutionCount(job.getExecutionCount());
         resource.setName(job.getName());
+
+        Link jobLink = linkTo(JobsController.class)
+                .slash(job.getName())
+                .withSelfRel();
+
+        resource.add(jobLink);
         return resource;
     }
 

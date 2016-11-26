@@ -5,6 +5,8 @@ import lombok.Setter;
 import org.springframework.hateoas.ResourceSupport;
 import org.springframework.hateoas.core.Relation;
 
+import java.util.List;
+
 /**
  * @author Tiberiu
  * @since 21/11/2016.
@@ -18,4 +20,5 @@ public class JobResource extends ResourceSupport {
 
     private Long executionCount;
 
+    private List<JobInstanceResource> jobInstances;
 }

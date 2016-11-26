@@ -48,7 +48,7 @@ public class SpringBootBatch {
 
     @Bean
     Step step1() {
-        return steps.get("step1")
+        return steps.get("step" + new Random().nextInt(10))
                 .<Item, Item>chunk(100)
                 .reader(reader())
                 .processor(processor())
@@ -84,7 +84,14 @@ public class SpringBootBatch {
 
     @Bean
     Tasklet tasklet() {
-        return (contribution, context) -> RepeatStatus.FINISHED;
+        return (contribution, context) -> {
+            int random = new Random().nextInt(10);
+            if (random % 2 == 0) {
+                return RepeatStatus.FINISHED;
+            } else {
+                return RepeatStatus.CONTINUABLE;
+            }
+        };
     }
 
     @Bean
@@ -95,7 +102,7 @@ public class SpringBootBatch {
     @Bean
     Job job1() throws Exception {
         return jobs
-                .get("job1")
+                .get("job - " + new Random().nextInt(10))
                 .start(step1())
                 .next(step2())
                 .incrementer(runIdIncrementer())
@@ -105,7 +112,7 @@ public class SpringBootBatch {
     @Bean
     Job job2() throws Exception {
         return jobs
-                .get("job2")
+                .get("job - " + new Random().nextInt(10))
                 .start(step2())
                 .next(step1())
                 .incrementer(runIdIncrementer())
