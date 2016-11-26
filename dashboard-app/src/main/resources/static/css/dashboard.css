@@ -7,6 +7,15 @@ body {
     margin-bottom: 20px;
 }
 
+.bg-inverse {
+    background: #002846 !important;
+}
+
+/*.navbar-dark .navbar-brand, .navbar-dark .navbar-toggler {*/
+    /*color: #E00000;*/
+/*}*/
+
+
 .backgrid-filter.form-search {
     height: 30px;
     margin: 20px 0;
