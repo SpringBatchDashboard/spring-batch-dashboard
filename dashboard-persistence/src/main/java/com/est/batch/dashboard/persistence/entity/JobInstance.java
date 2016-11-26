@@ -20,8 +20,11 @@ import javax.persistence.Id;
 public class JobInstance {
 
     @Id
-    @Column(name = "JOB_INSTANCE_ID")
+    @Column(name = "JOB_INSTANCE_ID", insertable = false, updatable = false)
     private Long id;
+
+    @Column(name = "JOB_INSTANCE_ID", insertable = false, updatable = false)
+    private Long jobInstanceId;
 
     @Column
     private Long version;
