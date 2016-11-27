@@ -23,7 +23,7 @@ import java.util.stream.StreamSupport;
  * @since 20/11/2016.
  */
 @RestController
-@RequestMapping(value = "/jobs", produces = MediaType.APPLICATION_JSON_VALUE)
+@RequestMapping(value = "/api/jobs", produces = MediaType.APPLICATION_JSON_VALUE)
 public class JobsController {
 
     private JobInstanceRestRepository jobInstanceRestRepository;
