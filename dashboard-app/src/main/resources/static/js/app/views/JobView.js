@@ -7,7 +7,9 @@ DashboardApp.Views.JobView = Backbone.View.extend({
 
         var columns = [
             {name: "name", label: "Name", cell: "string", editable: false},
-            {name: "executionCount", label: "Execution Count", cell: "string", editable: false}
+            {name: "executionCount", label: "Execution Count", cell: "string", editable: false},
+            {name: "_links.self.href", label: "Details", cell: "string", editable: false},
+            {name: "_links.findAllByJobNameOrderByIdDesc.href", label: "Instances", cell: "string", editable: false}
         ];
 
         var jobs = new DashboardApp.Collections.JobCollection();
