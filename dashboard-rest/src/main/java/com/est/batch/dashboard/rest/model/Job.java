@@ -1,30 +1,39 @@
 package com.est.batch.dashboard.rest.model;
 
 import com.est.batch.dashboard.persistence.entity.JobInstance;
-import lombok.Getter;
-import lombok.Setter;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
 /**
  * @author Tiberiu
  * @since 20/11/2016.
  */
-@Getter
-@Setter
 public class Job {
 
     private String name;
 
-    private Long executionCount;
+    private List<JobInstance> jobInstances;
 
-    public Job(JobInstance jobInstance) {
-        this.name = jobInstance.getJobName();
-        this.executionCount = 1L;
+    public Job() {
+        jobInstances = new ArrayList<>();
     }
 
-    public void incExecutionCount() {
-        executionCount++;
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public List<JobInstance> getJobInstances() {
+        return jobInstances;
+    }
+
+    public Long getExecutionCount() {
+        return (long) jobInstances.size();
     }
 
     @Override

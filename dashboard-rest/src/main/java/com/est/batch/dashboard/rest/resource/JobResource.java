@@ -17,5 +17,4 @@ public class JobResource extends ResourceSupport {
     private String name;
 
     private Long executionCount;
-
 }
