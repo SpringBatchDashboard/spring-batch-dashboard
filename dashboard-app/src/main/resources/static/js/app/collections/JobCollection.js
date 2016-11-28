@@ -4,7 +4,7 @@ DashboardApp.Collections.JobCollection = Backbone.PageableCollection.extend({
     url: "api/jobs",
 
     state: {
-        pageSize: 10
+        pageSize: 15
     },
 
     mode: "client",
