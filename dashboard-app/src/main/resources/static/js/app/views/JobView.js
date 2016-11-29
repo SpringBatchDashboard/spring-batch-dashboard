@@ -10,7 +10,7 @@ DashboardApp.Views.JobView = Backbone.View.extend({
 				_.extend({}, Backgrid.SelectFormatter.prototype, {
 					fromRaw: function (rawValue, model) {
 					    var href = model.get("_links").self.href;
-						return formatter;
+						return rawValue;
 					}
 				})},
             {name: "executionCount", label: "Execution Count", cell: "string", editable: false},
