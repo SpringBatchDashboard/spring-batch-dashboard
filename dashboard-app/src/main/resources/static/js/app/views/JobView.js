@@ -6,14 +6,15 @@ DashboardApp.Views.JobView = Backbone.View.extend({
     render: function () {
 
         var columns = [
-            {name: "name", label: "Name", cell: "string", editable: false},
+            {name: "name", label: "Name", cell: "string", editable: false, editable: false,formatter :
+				_.extend({}, Backgrid.SelectFormatter.prototype, {
+					fromRaw: function (rawValue, model) {
+					    var href = model.get("_links").self.href;
+						return name - formatter;
+					}
+				})},
             {name: "executionCount", label: "Execution Count", cell: "string", editable: false},
-            {name: "_links", label: "Details", cell: "string", editable: false,formatter :
-                _.extend({}, Backgrid.SelectFormatter.prototype, {
-                    fromRaw: function (rawValue, model) {
-                        return rawValue.findAllByJobNameOrderByIdDesc.href;
-                    }
-                })},
+            {name: "_links", label: "Details", cell: "string"},
             {name: "_links.findAllByJobNameOrderByIdDesc.href", label: "Instances", cell: "string", editable: false}
         ];
 
