@@ -4,7 +4,7 @@ DashboardApp.Collections.JobInstanceCollection = Backbone.PageableCollection.ext
     url: "api/jobInstances",
 
     state: {
-        pageSize: 1
+        pageSize: 15
     },
 
     mode: "client",

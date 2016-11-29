@@ -3,6 +3,10 @@ body {
     padding-bottom: 20px;
 }
 
+.grid-title {
+    text-align: left;
+}
+
 .navbar {
     margin-bottom: 20px;
 }
@@ -12,15 +16,62 @@ body {
 }
 
 /*.navbar-dark .navbar-brand, .navbar-dark .navbar-toggler {*/
-    /*color: #E00000;*/
+/*color: #E00000;*/
 /*}*/
 
+.backgrid {
+    border: 1px solid #eceeef;
+    border-left-color: #ffffff;
+    border-right-color: #ffffff;
+}
+
+.backgrid th {
+}
+
+.backgrid thead th {
+    background-color: #ffffff;
+    color: #E00000;
+    padding-bottom: 7px;
+    padding-top: 7px;
+    border-bottom: 2px solid #eceeef;
+    border-top: 2px solid #eceeef;
+}
+
+.backgrid tbody tr {
+    /*background-color: #f9f9f9;*/
+}
+
+.backgrid tr:hover {
+    background-color: #eceeef;
+    /*color: #FFFFFF;*/
+}
+
+.backgrid-container {
+    height: auto;
+}
+
+.tag-warning {
+    background-color: #E00000;
+    color: #FFFFFF;
+}
 
 .backgrid-filter.form-search {
     height: 30px;
     margin: 20px 0;
     position: relative;
     width: 248px;
+}
+
+.backgrid-paginator ul > li > a,
+.backgrid-paginator ul > li > span {
+    color: #000000;
+}
+
+.backgrid-paginator ul > li > a:hover,
+.backgrid-paginator ul > .active > a,
+.backgrid-paginator ul > .active > span {
+    background-color: #E00000;
+    color: #ffffff;
 }
 
 .backgrid .string-cell,
