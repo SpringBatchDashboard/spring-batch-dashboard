@@ -1,6 +1,7 @@
 DashboardApp.Views.JobInstanceView = Backbone.View.extend({
 
     initialize: function (options) {
+        this.data = new DashboardApp.Collections.JobInstanceCollection(options.models);
     },
 
     render: function () {
@@ -12,29 +13,27 @@ DashboardApp.Views.JobInstanceView = Backbone.View.extend({
             {name: "jobKey", label: "Key", cell: "string", editable: false}
         ];
 
-        var jobInstances = new DashboardApp.Collections.JobInstanceCollection();
-
         // grid
         var grid = new Backgrid.Grid({
             columns: columns,
-            collection: jobInstances
+            collection: this.data
         });
         $("#grid").html(grid.render().el);
 
         // paginator
         var paginator = new Backgrid.Extension.Paginator({
-            collection: jobInstances
+            collection: this.data
         });
         $("#paginator").html(paginator.render().el);
 
         // filter
         var filter = new Backgrid.Extension.ClientSideFilter({
-            collection: jobInstances,
+            collection: this.data,
             fields: ['jobName']
         });
         $("#search").html(filter.render().el);
 
-        jobInstances.fetch({reset: true});
+        this.data.fetch({reset: true});
         return this;
     }
 });
