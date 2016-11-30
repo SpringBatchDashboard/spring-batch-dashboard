@@ -10,7 +10,9 @@ DashboardApp.Views.JobInstanceView = Backbone.View.extend({
             {name: "jobInstanceId", label: "ID", cell: "string", editable: false},
             {name: "jobName", label: "Name", cell: "string", editable: false},
             {name: "version", label: "Version", cell: "string", editable: false},
-            {name: "jobKey", label: "Key", cell: "string", editable: false}
+            {name: "jobKey", label: "Key", cell: "string", editable: false},
+            {name: "context", label: "Context", cell: "string", editable: false},
+            {name: "status", label: "Status", cell: "string", editable: false}
         ];
 
         // grid

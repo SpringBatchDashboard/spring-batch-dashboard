@@ -19,6 +19,7 @@
   <link rel="stylesheet" href="css/backgrid-paginator.css">
   <link rel="stylesheet" href="css/backgrid-filter.css">
   <link rel="stylesheet" href="css/dashboard.css">
+  <link rel="stylesheet" href="css/font-awesome/font-awesome.min.css">
 
   <!-- scripts -->
   <script type="text/javascript" src="js/lib/tether/tether.min.js"></script>
@@ -58,17 +59,38 @@
 
     <nav class="navbar navbar-dark bg-inverse">
       <a class="navbar-brand-d navbar-brand" href="#">
-        <img src="images/dashboard.png" class="d-inline-block align-top" width="30" height="30" alt="">Batch Dashboard
+        <i class="fa fa-tachometer">
+          <span class="text-white">Batch Dashboard</span>
+        </i>
+
       </a>
 
       <div id="navbar">
         <nav class="nav navbar-nav float-xs-left">
           <a class="nav-item nav-link" href="#jobs">jobs</a>
-          <a class="nav-item nav-link" href="#instances">job instances</a>
+          <a class="nav-item nav-link" href="#instances">instances</a>
+          <a class="nav-item nav-link" href="#statistics">statistics</a>
         </nav>
         <nav class="nav navbar-nav float-xs-right">
-          <a class="nav-item nav-link tag-pill tag-warning" href="#">inbox <span class="glyphicons glyphicons-message-new">2</span></a>
-          <a class="nav-item nav-link" href="#">logout</a>
+          <!--<a class="nav-item nav-link tag-pill tag-warning" href="#">inbox <span class="glyphicons glyphicons-message-new">2</span></a>-->
+
+          <a class="nav-item nav-link" href="#">
+            <i class="fa fa-envelope">
+              <span class="text-white">2</span>
+            </i>
+          </a>
+
+          <a class="nav-item nav-link" href="#">
+            <i class="fa fa-bell-o tag tag-pill tag-danger">
+              <span class="text-white">5</span>
+            </i>
+          </a>
+
+          <a class="nav-item nav-link" href="#logout">
+              <i class="fa fa-user-circle">
+              </i>
+          </a>
+
         </nav>
       </div>
     </nav>
