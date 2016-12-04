@@ -18,6 +18,7 @@
   <link rel="stylesheet" href="css/backgrid.css">
   <link rel="stylesheet" href="css/backgrid-paginator.css">
   <link rel="stylesheet" href="css/backgrid-filter.css">
+  <link rel="stylesheet" href="css/backgrid/backgrid-cell-extensions.css">
   <link rel="stylesheet" href="css/dashboard.css">
   <link rel="stylesheet" href="css/font-awesome/font-awesome.min.css">
 
@@ -31,6 +32,7 @@
   <script type="text/javascript" src="js/lib/backgrid/backgrid.js"></script>
   <script type="text/javascript" src="js/lib/backgrid/backgrid-paginator.js"></script>
   <script type="text/javascript" src="js/lib/backgrid/backgrid-filter.js"></script>
+  <script type="text/javascript" src="js/lib/backgrid/backgrid-cell-extensions.js"></script>
   <script type="text/javascript" src="js/app/grid/BackgridLinkCell.js"></script>
 
 
@@ -59,7 +61,7 @@
 
     <nav class="navbar navbar-dark bg-inverse">
       <a class="navbar-brand-d navbar-brand" href="#">
-        <i class="fa fa-tachometer">
+        <i class="fa fa-desktop">
           <span class="text-white">Batch Dashboard</span>
         </i>
 
@@ -69,13 +71,17 @@
         <nav class="nav navbar-nav float-xs-left">
           <a class="nav-item nav-link" href="#jobs">jobs</a>
           <a class="nav-item nav-link" href="#instances">instances</a>
-          <a class="nav-item nav-link" href="#statistics">statistics</a>
+          <a class="nav-item nav-link" href="#executions">executions</a>
+          <a class="nav-item nav-link" href="#statistics">statistics
+            <i class="fa fa-bar-chart-o"></i>
+          </a>
         </nav>
+
         <nav class="nav navbar-nav float-xs-right">
           <!--<a class="nav-item nav-link tag-pill tag-warning" href="#">inbox <span class="glyphicons glyphicons-message-new">2</span></a>-->
 
           <a class="nav-item nav-link" href="#">
-            <i class="fa fa-envelope">
+            <i class="fa fa-envelope-o">
               <span class="text-white">2</span>
             </i>
           </a>
@@ -87,7 +93,7 @@
           </a>
 
           <a class="nav-item nav-link" href="#logout">
-              <i class="fa fa-user-circle">
+              <i class="fa fa-user-o">
               </i>
           </a>
 
