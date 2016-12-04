@@ -43,17 +43,19 @@ body {
     color: #E00000;
 }
 
-
 .backgrid-paginator ul > li > a,
 .backgrid-paginator ul > li > span {
     color: #000000;
 }
 
-.backgrid-paginator ul > li > a:hover,
 .backgrid-paginator ul > .active > a,
 .backgrid-paginator ul > .active > span {
     background-color: #E00000;
     color: #ffffff;
+}
+
+.backgrid-paginator ul > li > a:hover{
+    background-color: #eceeef;
 }
 
 .backgrid {
@@ -75,12 +77,10 @@ body {
 }
 
 .backgrid tbody tr {
-    /*background-color: #f9f9f9;*/
 }
 
 .backgrid tr:hover {
     background-color: #eceeef;
-    /*color: #FFFFFF;*/
 }
 
 .backgrid-container {
