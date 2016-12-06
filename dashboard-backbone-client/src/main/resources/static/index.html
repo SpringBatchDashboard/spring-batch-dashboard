@@ -1,0 +1,117 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <meta name="description" content="Spring Batch Dashboard">
+  <link rel="icon" href="../../favicon.ico">
+  <meta charset="UTF8">
+
+  <title>Batch Dashboard</title>
+
+  <!-- css -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/backgrid.css">
+  <link rel="stylesheet" href="css/backgrid-paginator.css">
+  <link rel="stylesheet" href="css/backgrid-filter.css">
+  <link rel="stylesheet" href="css/backgrid/backgrid-cell-extensions.css">
+  <link rel="stylesheet" href="css/dashboard.css">
+  <link rel="stylesheet" href="css/font-awesome/font-awesome.min.css">
+
+  <!-- scripts -->
+  <script type="text/javascript" src="js/lib/tether/tether.min.js"></script>
+  <script type="text/javascript" src="js/lib/jquery/jquery-3.0.0.min.js"></script>
+  <script type="text/javascript" src="js/lib/bootstrap/bootstrap.min.js"></script>
+  <script type="text/javascript" src="js/lib/underscore/underscore-min.js"></script>
+  <script type="text/javascript" src="js/lib/backbone/backbone-min.js"></script>
+  <script type="text/javascript" src="js/lib/backbone/backbone.paginator.js"></script>
+  <script type="text/javascript" src="js/lib/backgrid/backgrid.js"></script>
+  <script type="text/javascript" src="js/lib/backgrid/backgrid-paginator.js"></script>
+  <script type="text/javascript" src="js/lib/backgrid/backgrid-filter.js"></script>
+  <script type="text/javascript" src="js/lib/backgrid/backgrid-cell-extensions.js"></script>
+  <script type="text/javascript" src="js/app/grid/BackgridLinkCell.js"></script>
+
+
+  <script type="text/javascript" src="js/dashboard.js"></script>
+
+  <!-- models -->
+  <script type="text/javascript" src="js/app/models/JobInstanceModel.js"></script>
+  <script type="text/javascript" src="js/app/models/JobModel.js"></script>
+
+  <!-- views -->
+  <script type="text/javascript" src="js/app/views/HomeView.js"></script>
+  <script type="text/javascript" src="js/app/views/JobView.js"></script>
+  <script type="text/javascript" src="js/app/views/JobInstanceView.js"></script>
+
+  <!-- collections -->
+  <script type="text/javascript" src="js/app/collections/JobCollection.js"></script>
+  <script type="text/javascript" src="js/app/collections/JobInstanceCollection.js"></script>
+
+  <!-- router -->
+  <script type="text/javascript" src="js/router.js"></script>
+
+</head>
+
+<body>
+  <div class="container">
+
+    <nav class="navbar navbar-dark bg-inverse">
+      <a class="navbar-brand-d navbar-brand" href="#">
+        <i class="fa fa-desktop">
+          <span class="text-white">Batch Dashboard</span>
+        </i>
+
+      </a>
+
+      <div id="navbar">
+        <nav class="nav navbar-nav float-xs-left">
+          <a class="nav-item nav-link" href="#jobs">jobs</a>
+          <a class="nav-item nav-link" href="#instances">instances</a>
+          <a class="nav-item nav-link" href="#executions">executions</a>
+          <a class="nav-item nav-link" href="#statistics">statistics
+            <i class="fa fa-bar-chart-o"></i>
+          </a>
+        </nav>
+
+        <nav class="nav navbar-nav float-xs-right">
+          <!--<a class="nav-item nav-link tag-pill tag-warning" href="#">inbox <span class="glyphicons glyphicons-message-new">2</span></a>-->
+
+          <a class="nav-item nav-link" href="#">
+            <i class="fa fa-envelope-o">
+              <span class="text-white">2</span>
+            </i>
+          </a>
+
+          <a class="nav-item nav-link" href="#">
+            <i class="fa fa-bell-o tag tag-pill tag-danger">
+              <span class="text-white">5</span>
+            </i>
+          </a>
+
+          <a class="nav-item nav-link" href="#logout">
+              <i class="fa fa-user-o">
+              </i>
+          </a>
+
+        </nav>
+      </div>
+    </nav>
+
+    <div>
+      <div class="float-lg-left grid-title"><h2>Jobs</h2></div>
+      <div id="search" class="backgrid-filter float-lg-right"></div>
+    </div>
+
+    <div id="grid" class="backgrid-container"></div>
+
+    <div id="paginator" class="backgrid-paginator"></div>
+
+  </div>
+
+</body>
+
+</html>

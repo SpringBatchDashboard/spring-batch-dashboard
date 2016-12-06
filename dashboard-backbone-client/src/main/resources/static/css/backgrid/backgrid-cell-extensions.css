@@ -1,0 +1,11 @@
+/*
+ * Styles for the StatusFormatterCell extension
+ */
+
+td .status { border-radius: 5px; display: inline; font-size: 110%; font-weight: bold; padding: 3px 5px; }
+
+td .status.really-bad { background: #C00;    color: #FFF; }
+td .status.bad        { background: #FF6900; color: #FFF; }
+td .status.medium     { background: #125A9C; color: #FFF; }
+td .status.good       { background: #357F5B; color: #FFF; }
+td .status.disabled   { background: #CCC;    color: #B4B4B4; }

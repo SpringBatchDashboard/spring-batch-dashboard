@@ -21,6 +21,7 @@
         <module>dashboard-persistence</module>
         <module>dashboard-rest</module>
         <module>dashboard-app</module>
+        <module>dashboard-backbone-client</module>
         <module>sample-generator</module>
     </modules>
 

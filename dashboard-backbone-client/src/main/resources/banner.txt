@@ -1,0 +1,9 @@
+${AnsiColor.BRIGHT_BLUE}    .___             .__   ___.                          .___
+${AnsiColor.BRIGHT_BLUE}  __| ______    _____|  |__\_ |__   _________ _______  __| _/
+${AnsiColor.BRIGHT_BLUE} / __ |\__  \  /  ___|  |  \| __ \ /  _ \__  \\_  __ \/ __ |
+${AnsiColor.BRIGHT_BLUE}/ /_/ | / __ \_\___ \|   Y  | \_\ (  <_> / __ \|  | \/ /_/ |
+${AnsiColor.BRIGHT_BLUE}\____ |(____  /____  |___|  |___  /\____(____  |__|  \____ |
+${AnsiColor.BRIGHT_BLUE}     \/     \/     \/     \/    \/           \/           \/
+
+${AnsiColor.BRIGHT_RED}${application.title} ${application.version}
+${AnsiColor.BRIGHT_RED}Running Spring Boot ${spring-boot.version} ::${AnsiColor.BLACK}

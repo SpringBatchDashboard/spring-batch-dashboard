@@ -1,0 +1,104 @@
+body {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: white;
+}
+
+.yellow-icon{
+    color: #f0ad4e;
+}
+
+.red-icon{
+    color: #E00000;
+}
+
+.grid-title {
+    text-align: left;
+}
+
+.navbar {
+    margin-bottom: 20px;
+}
+
+.bg-inverse {
+    background: #002846 !important;
+}
+
+.tag-warning {
+/*#    background-color: #f0ad4e;*/
+    /*color: #FFFFFF;*/
+}
+
+.backgrid-filter.form-search {
+    height: 30px;
+    margin: 20px 0;
+    position: relative;
+    width: 248px;
+    border-color: #002846;
+    color: #002846;
+}
+
+.backgrid-filter input[type="search"]{
+    border-color: #002846;
+    color: #E00000;
+}
+
+.backgrid-paginator ul > li > a,
+.backgrid-paginator ul > li > span {
+    color: #000000;
+}
+
+.backgrid-paginator ul > .active > a,
+.backgrid-paginator ul > .active > span {
+    background-color: #E00000;
+    color: #ffffff;
+}
+
+.backgrid-paginator ul > li > a:hover{
+    background-color: #eceeef;
+}
+
+.backgrid {
+    border: 1px solid #eceeef;
+    border-left-color: #ffffff;
+    border-right-color: #ffffff;
+}
+
+.backgrid th {
+}
+
+.backgrid thead th {
+    background-color: #ffffff;
+    color: #E00000;
+    padding-bottom: 7px;
+    padding-top: 7px;
+    border-bottom: 2px solid #eceeef;
+    border-top: 2px solid #eceeef;
+}
+
+.backgrid tbody tr {
+}
+
+.backgrid tr:hover {
+    background-color: #eceeef;
+}
+
+.backgrid-container {
+    height: auto;
+}
+
+.backgrid .string-cell,
+.backgrid .uri-cell,
+.backgrid .link-cell,
+.backgrid .email-cell,
+.backgrid .string-cell.editor input[type=text],
+.backgrid .uri-cell.editor input[type=text],
+.backgrid .email-cell.editor input[type=text] {
+    text-align: center;
+    color: #002846;
+}
+
+.backgrid .link-cell a:link{
+    text-decoration: underline;
+    color: #002846;
+}
