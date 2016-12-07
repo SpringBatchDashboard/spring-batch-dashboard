@@ -14,5 +14,5 @@ import java.util.List;
 @RepositoryRestResource
 public interface JobInstanceRestRepository extends ReadOnlyRepository<JobInstance, Long> {
 
-    List<JobInstance> findAllByJobNameOrderByIdDesc(@Param("name")String jobName);
+    List<JobInstance> findAllByJobNameOrderByIdDesc(@Param("jobName")String jobName);
 }
