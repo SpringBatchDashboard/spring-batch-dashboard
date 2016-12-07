@@ -9,7 +9,7 @@ DashboardApp.Collections.JobInstanceCollection = Backbone.PageableCollection.ext
 
     url: function () {
         if (this.jobName) {
-            return "api/jobInstances/search/findAllByJobNameOrderByIdDesc?jobName=" + this.jobName;
+            return "api/jobInstances/search/findAllByJobNameOrderByIdDesc?name=" + this.jobName;
         } else {
             return "api/jobInstances";
         }
