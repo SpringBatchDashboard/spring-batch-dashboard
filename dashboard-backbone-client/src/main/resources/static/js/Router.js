@@ -3,8 +3,7 @@ DashboardApp.Router = Backbone.Router.extend({
     routes: {
         'home': 'goHome',
         'jobs': 'goJobs',
-        'instances': 'goJobInstances',
-        'jobInstances': 'goJobInstances'
+        'instances': 'goJobInstances'
     },
 
     goHome: function () {
@@ -17,27 +16,8 @@ DashboardApp.Router = Backbone.Router.extend({
         $('#main').html(view.render().el);
     },
 
-    goJobInstances: function (param) {
-        if (param) {
-            $.ajax({
-                    url: "api/jobInstances/search/findAllByJobNameOrderByIdDesc",
-                    data: {name: param},
-                    success: function (data) {
-                        var view = new DashboardApp.Views.JobInstanceView({models: data});
-                        $('#main').html(view.render().el);
-                    }
-                }
-            )
-        } else {
-            $.ajax({
-                    url: "api/jobInstances",
-                    data: {},
-                    success: function (data) {
-                        var view = new DashboardApp.Views.JobInstanceView({models: data});
-                        $('#main').html(view.render().el);
-                    }
-                }
-            )
-        }
+    goJobInstances: function (jobName) {
+        var view = new DashboardApp.Views.JobInstanceView({jobName: jobName});
+        $('#main').html(view.render().el);
     }
 });

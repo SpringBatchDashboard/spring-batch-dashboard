@@ -1,7 +1,7 @@
 DashboardApp.Views.JobInstanceView = Backbone.View.extend({
 
     initialize: function (options) {
-        this.data = new DashboardApp.Collections.JobInstanceCollection(options.models);
+        this.data = new DashboardApp.Collections.JobInstanceCollection(options);
     },
 
     render: function () {

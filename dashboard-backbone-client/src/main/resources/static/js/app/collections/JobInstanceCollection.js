@@ -1,15 +1,22 @@
 DashboardApp.Collections.JobInstanceCollection = Backbone.PageableCollection.extend({
     model: DashboardApp.Models.JobInstanceModel,
 
-    url: "api/jobInstances",
-
     state: {
-        pageSize: 15
+        pageSize: 20
     },
 
     mode: "client",
 
+    url: function () {
+        if (this.jobName) {
+            return "api/jobInstances/search/findAllByJobNameOrderByIdDesc?jobName=" + this.jobName;
+        } else {
+            return "api/jobInstances";
+        }
+    },
+
     initialize: function (options) {
+        this.jobName = options.jobName;
     },
 
     parse: function (response) {
