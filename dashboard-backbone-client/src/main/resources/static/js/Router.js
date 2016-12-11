@@ -1,23 +1,33 @@
-DashboardApp.Router = Backbone.Router.extend({
+define(
+    ['backbone', 'jobs.view', 'instances.view'],
 
-    routes: {
-        'home': 'goHome',
-        'jobs': 'goJobs',
-        'instances': 'goJobInstances'
-    },
+    function (Backbone, JobsView, InstancesView) {
+        console.log('Router.js loaded');
 
-    goHome: function () {
-        var view = new DashboardApp.Views.HomeView();
-        $('#main').html(view.render().el);
-    },
+        var Router = Backbone.Router.extend({
 
-    goJobs: function () {
-        var view = new DashboardApp.Views.JobView();
-        $('#main').html(view.render().el);
-    },
+                initialize: function (options) {
+                    console.log('Router initialized');
+                },
 
-    goJobInstances: function (jobName) {
-        var view = new DashboardApp.Views.JobInstanceView({jobName: jobName});
-        $('#main').html(view.render().el);
+                routes: {
+                    'home': 'goJobs',
+                    'jobs': 'goJobs',
+                    'instances': 'goInstances'
+                },
+
+                goJobs: function () {
+                    var view = new JobsView();
+                    $('#main').html(view.render().el);
+                },
+
+                goInstances: function (jobName) {
+                    var view = new InstancesView({jobName: jobName});
+                    $('#main').html(view.render().el);
+                }
+            }
+        );
+
+        return Router;
     }
-});
+);
