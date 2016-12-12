@@ -4,6 +4,10 @@ body {
     background-color: white;
 }
 
+.tag-danger{
+    background-color: #E00000;
+}
+
 .yellow-icon{
     color: #f0ad4e;
 }

@@ -26,60 +26,66 @@
 </head>
 
 <body>
-  <div class="container">
+<div class="container">
 
-    <nav class="navbar navbar-dark bg-inverse">
-      <a class="navbar-brand-d navbar-brand" href="#">
-        <i class="fa fa-desktop">
-          <span class="text-white">Batch Dashboard</span>
-        </i>
+  <nav class="navbar navbar-dark bg-inverse">
 
-      </a>
+    <a class="navbar-brand-d navbar-brand" href="#">
+      <i class="fa fa-desktop">
+        <span class="text-white">Batch Dashboard</span>
+      </i>
+    </a>
 
-      <div id="navbar">
-        <nav class="nav navbar-nav float-xs-left">
-          <a class="nav-item nav-link" href="#jobs">jobs</a>
-          <a class="nav-item nav-link" href="#instances">instances</a>
-          <a class="nav-item nav-link" href="#executions">executions</a>
-          <a class="nav-item nav-link" href="#statistics">statistics
-            <i class="fa fa-bar-chart-o"></i>
-          </a>
-        </nav>
+    <ul class="nav navbar-nav">
 
-        <nav class="nav navbar-nav float-xs-right">
-          <!--<a class="nav-item nav-link tag-pill tag-warning" href="#">inbox <span class="glyphicons glyphicons-message-new">2</span></a>-->
+      <li class="nav-item float-xs-left">
+        <a class="nav-link" href="#jobs">jobs</a>
+      </li>
 
-          <a class="nav-item nav-link" href="#">
-            <i class="fa fa-envelope-o">
-              <span class="text-white">2</span>
-            </i>
-          </a>
+      <li class="nav-item float-xs-left">
+        <a class="nav-link" href="#instances">instances</a>
+      </li>
 
-          <a class="nav-item nav-link" href="#">
-            <i class="fa fa-bell-o tag tag-pill tag-danger">
-              <span class="text-white">5</span>
-            </i>
-          </a>
+      <li class="nav-item float-xs-left">
+        <a class="nav-link" href="#executions">executions</a>
+      </li>
 
-          <a class="nav-item nav-link" href="#logout">
-              <i class="fa fa-user-o">
-              </i>
-          </a>
+      <li class="nav-item float-xs-left">
+        <a class="nav-link" href="#statistics">statistics<i class="fa fa-bar-chart-o"></i></a>
+      </li>
 
-        </nav>
-      </div>
-    </nav>
+      <li class="nav-item dropdown float-xs-right">
+        <a class="nav-link dropdown-toggle" id="userDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <i class="fa fa-user-o"></i>
+        </a>
+        <div class="dropdown-menu" aria-labelledby="userDropdown">
+          <a class="dropdown-item" href="#">logout</a>
+        </div>
+      </li>
 
-    <div>
-      <div class="float-lg-left grid-title"><h2>Jobs</h2></div>
-      <div id="search" class="backgrid-filter float-lg-right"></div>
-    </div>
+      <li class="nav-item dropdown float-xs-right">
+        <a class="nav-link dropdown-toggle" id="notificationDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <i class="fa fa-bell-o tag tag-pill tag-danger"><span class="text-white">5</span></i>
+        </a>
+        <div class="dropdown-menu" aria-labelledby="notificationDropdown">
+          <a class="dropdown-item" href="#">failed <span class="tag tag-pill tag-danger">2</span></a>
+          <a class="dropdown-item" href="#">success <span class="tag tag-pill tag-success">15</span></a>
+        </div>
+      </li>
 
-    <div id="grid" class="backgrid-container"></div>
+    </ul>
+  </nav>
 
-    <div id="paginator" class="backgrid-paginator"></div>
-
+  <div>
+    <div class="float-lg-left grid-title"><h2>Jobs</h2></div>
+    <div id="search" class="backgrid-filter float-lg-right"></div>
   </div>
+
+  <div id="grid" class="backgrid-container"></div>
+
+  <div id="paginator" class="backgrid-paginator"></div>
+
+</div>
 
 </body>
 
