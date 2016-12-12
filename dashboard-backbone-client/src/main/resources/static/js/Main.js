@@ -34,11 +34,18 @@ require.config({
     }
 );
 
-require(['backbone', 'router'], function (Backbone, Router) {
-    console.log('Main.js loaded');
-
-    new Router();
-    Backbone.history.start();
+require(['tether'], function(Tether) {
+    window.Tether = Tether;
 });
 
+require(['backbone', 'router', 'underscore', 'jquery', 'bootstrap'],
+
+    function (Backbone, Router) {
+
+        console.log('Main.js loaded');
+
+        new Router();
+        Backbone.history.start();
+    }
+);
 
